@@ -1,0 +1,142 @@
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "JetBrains Mono Nerd Font";
+  font-size: 10px;
+  font-weight: 700;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+window#waybar {
+  background: transparent;
+  color: @foreground;
+}
+
+#waybar > box {
+  min-height: 26px;
+  margin: 1px 6px 0;
+  padding: 0 4px;
+  background-color: alpha(@background, 0.92);
+  border-top: 1px solid alpha(#cba6f7, 0.75);
+  border-bottom: 1px solid alpha(#45475a, 0.95);
+  box-shadow: 0 3px 12px alpha(#000000, 0.38);
+}
+
+.modules-left { margin-left: 2px; }
+.modules-right { margin-right: 2px; }
+
+#custom-brand {
+  min-height: 20px;
+  padding: 0 7px;
+  color: @foreground;
+  background-color: alpha(#171723, 0.92);
+  border-left: 2px solid #cba6f7;
+  border-right: 1px solid alpha(#89b4fa, 0.5);
+  letter-spacing: 0.5px;
+}
+
+#custom-brand:hover,
+#mpris:hover,
+#network:hover,
+#pulseaudio:hover,
+#memory:hover,
+#cpu:hover,
+#battery:hover {
+  color: #ffffff;
+  background-color: alpha(#cba6f7, 0.16);
+}
+
+#workspaces {
+  margin: 0 8px 0 10px;
+  padding: 0 2px;
+  background-color: alpha(#171723, 0.78);
+  border-bottom: 1px solid alpha(#45475a, 0.8);
+}
+
+#workspaces button {
+  min-width: 20px;
+  min-height: 20px;
+  margin: 3px 1px;
+  padding: 0 4px;
+  color: alpha(@foreground, 0.46);
+  background-color: transparent;
+}
+
+#workspaces button:hover {
+  color: @foreground;
+  background-color: alpha(#89b4fa, 0.14);
+}
+
+#workspaces button.active {
+  color: #1e1e2e;
+  background-color: #cba6f7;
+  box-shadow: inset 0 -2px 0 #89b4fa;
+}
+
+#workspaces button.urgent {
+  color: #1e1e2e;
+  background-color: #f38ba8;
+}
+
+#tray,
+#mpris,
+#network,
+#pulseaudio,
+#memory,
+#cpu,
+#battery {
+  min-height: 20px;
+  margin: 3px 1px;
+  padding: 0 6px;
+  color: @foreground;
+  background-color: alpha(#171723, 0.68);
+  border-bottom: 1px solid alpha(#45475a, 0.75);
+}
+
+#tray { padding: 0 5px; }
+#mpris { color: #d5dcf6; }
+#network { color: #94e2d5; }
+#pulseaudio { color: #cba6f7; }
+#memory { color: #89b4fa; }
+#cpu { color: #cba6f7; }
+#battery { color: #a6e3a1; }
+
+#custom-clock {
+  min-width: 174px;
+  padding: 0 14px;
+  color: #dae0f7;
+  background-color: alpha(#353543, 0.55);
+  border-left: 1px solid alpha(#cba6f7, 0.62);
+  border-right: 1px solid alpha(#cba6f7, 0.62);
+  letter-spacing: 0.7px;
+}
+
+#memory.warning,
+#cpu.warning,
+#battery.warning { color: #f9e2af; }
+
+#memory.critical,
+#cpu.critical,
+#battery.critical:not(.charging) {
+  color: #f38ba8;
+  animation: nous-alert 1.2s steps(2) infinite;
+}
+
+tooltip {
+  padding: 7px 9px;
+  color: @foreground;
+  background-color: alpha(@background, 0.97);
+  border: 1px solid #cba6f7;
+  box-shadow: 0 5px 16px alpha(#000000, 0.45);
+}
+
+tooltip label { color: @foreground; font-weight: 500; }
+
+@keyframes nous-alert {
+  50% { opacity: 0.36; }
+}
