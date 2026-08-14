@@ -27,6 +27,8 @@ as the theme background.
   restrained scan pulse on the Nous label.
 - Fastfetch uses a compact orbital Nous Research sigil with the eye/field-note
   motif from the original Nous theme.
+- `assets/nousresearch-logo.png` preserves the supplied logo used to derive
+  the Fastfetch ASCII mark.
 - `assets/folder-icon-source.png` preserves the supplied source art. The
   trimmed 256px/48px derivatives are installed as `folder` and inherited by
   the GTK file-manager folder variants.
