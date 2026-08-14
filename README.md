@@ -13,7 +13,8 @@ instrument-panel layout, Fastfetch mark, and folder icon treatment around it.
 The installer copies the theme into `~/.config/omarchy/themes/`, registers a
 small scoped theme hook, and selects `nous-theme-purple`. The hook installs the
 full Waybar layout, Fastfetch profile, Kitty caret override, and the inherited
-`Nous-Research` GTK icon theme. It does not change the wallpaper.
+`Nous-Research` GTK icon theme. The bundled dark purple field artwork is used
+as the theme background.
 
 ## What is special here
 
@@ -24,8 +25,8 @@ full Waybar layout, Fastfetch profile, Kitty caret override, and the inherited
 - Waybar is a compact field-station instrument strip: workspace cells, a
   centered date/time readout, live network/audio/resource telemetry, and a
   restrained scan pulse on the Nous label.
-- Fastfetch uses a tall research-signal ASCII mark sized for the reference
-  dashboard instead of the stock logo.
+- Fastfetch uses a compact orbital Nous Research sigil with the eye/field-note
+  motif from the original Nous theme.
 - `assets/folder-icon-source.png` preserves the supplied source art. The
   trimmed 256px/48px derivatives are installed as `folder` and inherited by
   the GTK file-manager folder variants.
