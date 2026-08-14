@@ -1,0 +1,111 @@
+{
+  "layer": "top",
+  "position": "top",
+  "exclusive": true,
+  "passthrough": false,
+  "height": 36,
+  "spacing": 0,
+  "reload_style_on_change": true,
+  "modules-left": [
+    "custom/brand",
+    "hyprland/workspaces",
+    "custom/field",
+    "tray",
+    "mpris"
+  ],
+  "modules-center": ["custom/clock"],
+  "modules-right": [
+    "network",
+    "pulseaudio",
+    "memory",
+    "cpu",
+    "battery"
+  ],
+
+  "custom/brand": {
+    "format": "  ◇  NOUS / RESEARCH  ",
+    "tooltip": false
+  },
+  "custom/field": {
+    "format": "  ·  ",
+    "tooltip": false
+  },
+  "custom/clock": {
+    "exec": "date +'%a %d %b  ·  %H:%M'",
+    "interval": 30,
+    "tooltip": false,
+    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
+  },
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "disable-scroll": true,
+    "sort-by-number": true,
+    "format": "{name}",
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": []
+    }
+  },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 6
+  },
+  "mpris": {
+    "format": "♫  {dynamic}",
+    "format-paused": "Ⅱ  {dynamic}",
+    "dynamic-order": ["artist", "title"],
+    "dynamic-len": 26,
+    "title-len": 26,
+    "tooltip-format": "{player} · {status}\n{artist} — {title}",
+    "status-icons": { "paused": "Ⅱ" }
+  },
+  "network": {
+    "format-wifi": "NET {signalStrength}%",
+    "format-ethernet": "NET wired",
+    "format-disconnected": "NET off",
+    "tooltip-format-wifi": "{essid} · {frequency} GHz\n⇣ {bandwidthDownBytes}  ⇡ {bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣ {bandwidthDownBytes}  ⇡ {bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Network disconnected",
+    "interval": 3,
+    "on-click": "omarchy-launch-wifi"
+  },
+  "pulseaudio": {
+    "format": "VOL {volume}%",
+    "format-muted": "VOL muted",
+    "format-bluetooth": "VOL {volume}%",
+    "scroll-step": 5,
+    "on-click": "omarchy-launch-audio",
+    "on-click-right": "pamixer -t",
+    "tooltip-format": "Playing at {volume}%"
+  },
+  "memory": {
+    "interval": 5,
+    "format": "MEM {percentage}%",
+    "on-click": "omarchy-launch-or-focus-tui btop",
+    "states": { "warning": 70, "critical": 90 }
+  },
+  "cpu": {
+    "interval": 5,
+    "format": "CPU {usage}%",
+    "on-click": "omarchy-launch-or-focus-tui btop",
+    "states": { "warning": 70, "critical": 90 }
+  },
+  "battery": {
+    "format": "BAT {capacity}%",
+    "format-charging": "BAT {capacity}% +",
+    "format-full": "BAT full",
+    "format-plugged": "BAT {capacity}% ac",
+    "tooltip-format-discharging": "Battery · {timeTo}",
+    "tooltip-format-charging": "Charging · {timeTo}",
+    "interval": 5,
+    "on-click": "omarchy-menu power",
+    "states": { "warning": 20, "critical": 10 }
+  }
+}

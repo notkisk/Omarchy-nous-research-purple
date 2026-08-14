@@ -1,0 +1,15 @@
+[Icon Theme]
+Name=Nous Research
+Comment=Purple field-note folders for the Nous Research theme
+Inherits=Yaru-purple,hicolor
+Directories=48x48/places,256x256/places
+
+[48x48/places]
+Size=48
+Context=Places
+Type=Fixed
+
+[256x256/places]
+Size=256
+Context=Places
+Type=Fixed
