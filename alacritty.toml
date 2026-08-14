@@ -26,11 +26,3 @@ white   = "#ffffff"
 [colors.cursor]
 text   = "#1e1e2e"
 cursor = "#cdd6f4"
-
-# Alacritty's native beam animation: a calm blink with a thin caret profile.
-[cursor]
-style = { shape = "Beam", blinking = "On" }
-blink_interval = 550
-blink_timeout = 0
-thickness = 0.15
-unfocused_hollow = true

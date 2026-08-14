@@ -1,18 +1,2 @@
-/* Nous Research / Purple Field Notes — semantic Waybar colors. */
-@define-color foreground #cdd6f4;
-@define-color bright_fg #dae0f7;
-@define-color light_fg #d5dcf6;
 @define-color background #1e1e2e;
-@define-color surface #171723;
-@define-color surface-strong #353543;
-@define-color accent #cba6f7;
-@define-color accent-hot #f38ba8;
-@define-color electric #89b4fa;
-@define-color blue #89b4fa;
-@define-color magenta #cba6f7;
-@define-color cyan #94e2d5;
-@define-color muted #9aa1b7;
-@define-color line #45475a;
-@define-color success #a6e3a1;
-@define-color warning #f9e2af;
-@define-color urgent #f38ba8;
+@define-color foreground #cdd6f4;
