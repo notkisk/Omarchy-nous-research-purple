@@ -13,7 +13,7 @@
 }
 
 window#waybar {
-  background: transparent;
+  background-color: #1e1e2e;
   color: @foreground;
 }
 
@@ -21,9 +21,9 @@ window#waybar {
   min-height: 26px;
   margin: 1px 6px 0;
   padding: 0 4px;
-  background-color: alpha(@background, 0.92);
-  border-top: 1px solid alpha(#cba6f7, 0.75);
-  border-bottom: 1px solid alpha(#45475a, 0.95);
+  background-color: #1e1e2e;
+  border-top: 1px solid #cba6f7;
+  border-bottom: 1px solid #45475a;
   box-shadow: 0 3px 12px alpha(#000000, 0.38);
 }
 
@@ -34,9 +34,9 @@ window#waybar {
   min-height: 20px;
   padding: 0 7px;
   color: @foreground;
-  background-color: alpha(#171723, 0.92);
+  background-color: #171723;
   border-left: 2px solid #cba6f7;
-  border-right: 1px solid alpha(#89b4fa, 0.5);
+  border-right: 1px solid #89b4fa;
   letter-spacing: 0.5px;
 }
 
@@ -48,14 +48,14 @@ window#waybar {
 #cpu:hover,
 #battery:hover {
   color: #ffffff;
-  background-color: alpha(#cba6f7, 0.16);
+  background-color: #353543;
 }
 
 #workspaces {
   margin: 0 8px 0 10px;
   padding: 0 2px;
-  background-color: alpha(#171723, 0.78);
-  border-bottom: 1px solid alpha(#45475a, 0.8);
+  background-color: #171723;
+  border-bottom: 1px solid #45475a;
 }
 
 #workspaces button {
@@ -69,7 +69,7 @@ window#waybar {
 
 #workspaces button:hover {
   color: @foreground;
-  background-color: alpha(#89b4fa, 0.14);
+  background-color: #353543;
 }
 
 #workspaces button.active {
@@ -94,8 +94,8 @@ window#waybar {
   margin: 3px 1px;
   padding: 0 6px;
   color: @foreground;
-  background-color: alpha(#171723, 0.68);
-  border-bottom: 1px solid alpha(#45475a, 0.75);
+  background-color: #171723;
+  border-bottom: 1px solid #45475a;
 }
 
 #tray { padding: 0 5px; }
@@ -110,9 +110,9 @@ window#waybar {
   min-width: 174px;
   padding: 0 14px;
   color: #dae0f7;
-  background-color: alpha(#353543, 0.55);
-  border-left: 1px solid alpha(#cba6f7, 0.62);
-  border-right: 1px solid alpha(#cba6f7, 0.62);
+  background-color: #353543;
+  border-left: 1px solid #cba6f7;
+  border-right: 1px solid #cba6f7;
   letter-spacing: 0.7px;
 }
 
@@ -130,7 +130,7 @@ window#waybar {
 tooltip {
   padding: 7px 9px;
   color: @foreground;
-  background-color: alpha(@background, 0.97);
+  background-color: #1e1e2e;
   border: 1px solid #cba6f7;
   box-shadow: 0 5px 16px alpha(#000000, 0.45);
 }

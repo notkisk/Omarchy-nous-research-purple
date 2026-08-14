@@ -6,11 +6,28 @@ set -euo pipefail
 config_root="${XDG_CONFIG_HOME:-$HOME/.config}"
 theme_dir="$config_root/omarchy/current/theme"
 
-mkdir -p "$config_root/fastfetch" "$config_root/waybar" "$config_root/kitty" "$config_root/omarchy/branding"
+mkdir -p "$config_root/fastfetch" "$config_root/waybar" "$config_root/kitty" \
+  "$config_root/omarchy/branding" "$config_root/nvim/plugin/after" "$config_root/nvim/lua/plugins"
 cp "$theme_dir/fastfetch.jsonc" "$config_root/fastfetch/config.jsonc"
 cp "$theme_dir/fastfetch-logo.txt" "$config_root/omarchy/branding/nous-research.txt"
 cp "$theme_dir/waybar/config.jsonc" "$config_root/waybar/config.jsonc"
 cp "$theme_dir/waybar/style.css" "$config_root/waybar/style.css"
+
+# Omarchy normally makes this Neovim plugin a symlink to the current theme;
+# avoid copying a file onto itself when that standard link is present.
+nvim_theme="$config_root/nvim/lua/plugins/theme.lua"
+if [[ "$(readlink -f "$nvim_theme" 2>/dev/null || true)" != "$(readlink -f "$theme_dir/neovim.lua")" ]]; then
+  cp "$theme_dir/neovim.lua" "$nvim_theme"
+fi
+cp "$theme_dir/neovim-transparency.lua" "$config_root/nvim/plugin/after/transparency.lua"
+
+# Keep GTK, file managers, and browser chrome on the same dark mode as the
+# file explorer surface. The browser helper consumes chromium.theme (30,30,46).
+if command -v gsettings >/dev/null 2>&1; then
+  gsettings set org.gnome.desktop.interface color-scheme "prefer-dark" >/dev/null 2>&1 || true
+  gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark" >/dev/null 2>&1 || true
+fi
+command -v omarchy-theme-set-browser >/dev/null 2>&1 && omarchy-theme-set-browser || true
 
 # The existing Omarchy Kitty config includes this path after the theme file.
 cp "$theme_dir/kitty-override.conf" "$config_root/kitty/nous-research-override.conf"

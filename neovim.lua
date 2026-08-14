@@ -3,9 +3,10 @@ return {
     "bjarneo/aether.nvim",
     branch = "v3",
     name = "aether",
-    priority = 1000,
-    opts = {
-      colors = {
+      priority = 1000,
+      opts = {
+        transparent = false,
+        colors = {
         bg         = "#1e1e2e",
         dark_bg    = "#171723",
         darker_bg  = "#0f0f17",
