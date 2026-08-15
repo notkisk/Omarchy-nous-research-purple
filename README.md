@@ -51,9 +51,25 @@ omarchy theme bg next
 
 ## Wallpapers
 
-<img width="3344" height="1882" alt="vibes" src="https://github.com/user-attachments/assets/614ccd09-245b-41e2-883b-7279a1488e48" />
-<img width="3344" height="1882" alt="veritas" src="https://github.com/user-attachments/assets/347b2e21-d22f-4fc6-8c6f-d8ddd6c55767" />
-<img width="1672" height="941" alt="nous-purple-field" src="https://github.com/user-attachments/assets/b1b8e643-bcfa-4d9f-a0a8-96f7af198d4f" />
+<table>
+  <tr>
+    <td align="center">
+      <a href="./backgrounds/vibes.jpg">
+        <img src="https://github.com/user-attachments/assets/614ccd09-245b-41e2-883b-7279a1488e48" alt="vibes" width="400">
+      </a>
+    </td>
+    <td align="center">
+      <a href="./backgrounds/veritas.jpg">
+        <img src="https://github.com/user-attachments/assets/347b2e21-d22f-4fc6-8c6f-d8ddd6c55767" alt="veritas" width="400">
+      </a>
+    </td>
+    <td align="center">
+      <a href="./backgrounds/nous-purple-field.png">
+        <img src="https://github.com/user-attachments/assets/b1b8e643-bcfa-4d9f-a0a8-96f7af198d4f" alt="nous-purple-field" width="400">
+      </a>
+    </td>
+  </tr>
+</table>
 
 
 ## Design notes
