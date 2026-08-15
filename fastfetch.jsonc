@@ -3,6 +3,7 @@
   "logo": {
     "type": "file",
     "source": "~/.config/omarchy/current/theme/fastfetch-logo.txt",
+    "color": { "1": "#a746e8" },
     "padding": { "top": 0, "right": 4, "left": 0 }
   },
   "display": {
@@ -11,7 +12,7 @@
     "brightColor": false
   },
   "modules": [
-    { "type": "custom", "format": "\u001b[38;2;203;166;247m  ╭─ NOUS RESEARCH / FIELD NOTE ───────────────╮" },
+    { "type": "custom", "format": "\u001b[38;2;167;70;232m  ╭─ NOUS RESEARCH / FIELD NOTE ───────────────╮" },
     { "type": "os", "key": "  │ os", "keyColor": "#a746e8" },
     { "type": "host", "key": "  │ host", "keyColor": "#a746e8" },
     { "type": "kernel", "key": "  │ kernel", "keyColor": "#a746e8" },
@@ -20,11 +21,11 @@
     { "type": "gpu", "key": "  │ gpu", "keyColor": "#9563da", "detectionMethod": "pci" },
     { "type": "memory", "key": "  │ memory", "keyColor": "#9563da" },
     { "type": "disk", "key": "  ╰─ disk", "keyColor": "#9563da", "folders": "/" },
-    { "type": "custom", "format": "\u001b[38;2;69;71;90m  ├─────────────────────────────────────────────┤" },
+    { "type": "custom", "format": "\u001b[38;2;52;35;70m  ├─────────────────────────────────────────────┤" },
     { "type": "wm", "key": "  │ wm", "keyColor": "#a746e8" },
     { "type": "de", "key": "  │ de", "keyColor": "#a746e8" },
     { "type": "terminal", "key": "  │ terminal", "keyColor": "#a746e8" },
     { "type": "packages", "key": "  ╰─ packages", "keyColor": "#a746e8" },
-    { "type": "custom", "format": "\u001b[38;2;148;226;213m  ◇ research · build · understand · nous\u001b[0m" }
+    { "type": "custom", "format": "\u001b[38;2;189;158;234m  ◇ research · build · understand · nous\u001b[0m" }
   ]
 }

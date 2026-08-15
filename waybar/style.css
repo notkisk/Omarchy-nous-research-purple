@@ -7,36 +7,39 @@
   padding: 0;
   margin: 0;
   font-family: "JetBrains Mono Nerd Font";
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   transition: background-color 180ms ease, color 180ms ease;
 }
 
 window#waybar {
-  background-color: #06040b;
+  background-color: #07030d;
   color: @foreground;
 }
 
 #waybar > box {
-  min-height: 38px;
+  min-height: 32px;
   margin: 0;
-  padding: 0 4px;
-  background-color: #06040b;
+  padding: 0 8px;
+  background-color: #07030d;
   border-bottom: 1px solid #a746e8;
-  box-shadow: 0 3px 12px alpha(#000000, 0.38);
+  box-shadow: 0 4px 14px alpha(#000000, 0.54),
+              inset 0 -1px 0 alpha(#e7def0, 0.08);
 }
 
-.modules-left { margin-left: 2px; }
-.modules-right { margin-right: 2px; }
+.modules-left { margin-left: 0; }
+.modules-right { margin-right: 0; }
 
 #custom-brand {
-  min-height: 32px;
-  padding: 0 7px;
-  color: @foreground;
-  background-color: #06040b;
-  border-left: 2px solid #a746e8;
-  border-right: 1px solid #9563da;
-  letter-spacing: 0.5px;
+  min-height: 24px;
+  margin: 4px 10px 4px 0;
+  padding: 0 11px;
+  color: #f7efff;
+  background-image: linear-gradient(110deg, #5b1d9b, #a746e8 62%, #cf75ad);
+  border: 1px solid alpha(#e7def0, 0.27);
+  box-shadow: 0 0 11px alpha(#a746e8, 0.38),
+              inset 0 1px 0 alpha(#ffffff, 0.24);
+  letter-spacing: 0.8px;
 }
 
 #custom-brand:hover,
@@ -47,34 +50,39 @@ window#waybar {
 #cpu:hover,
 #battery:hover {
   color: #ffffff;
-  background-color: #1a1029;
+  background-color: #26113d;
 }
 
 #workspaces {
-  margin: 0 8px 0 10px;
-  padding: 0 2px;
-  background-color: #06040b;
-  border-bottom: 1px solid #342346;
+  margin: 0 8px 0 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
 }
 
 #workspaces button {
-  min-width: 28px;
-  min-height: 30px;
-  margin: 4px 1px;
+  min-width: 25px;
+  min-height: 24px;
+  margin: 4px 2px;
   padding: 0 4px;
-  color: alpha(@foreground, 0.46);
+  color: alpha(@foreground, 0.55);
   background-color: transparent;
+  border: 1px solid transparent;
+  box-shadow: inset 0 -1px 0 alpha(#a746e8, 0.20);
 }
 
 #workspaces button:hover {
   color: @foreground;
   background-color: #1a1029;
+  border-color: alpha(#a746e8, 0.55);
 }
 
 #workspaces button.active {
   color: #090611;
-  background-color: #a746e8;
-  box-shadow: inset 0 -2px 0 #9563da;
+  background-image: linear-gradient(135deg, #c25af0, #7831c7);
+  border-color: #d78df4;
+  box-shadow: 0 0 10px alpha(#a746e8, 0.50),
+              inset 0 1px 0 alpha(#ffffff, 0.35);
 }
 
 #workspaces button.urgent {
@@ -89,15 +97,16 @@ window#waybar {
 #memory,
 #cpu,
 #battery {
-  min-height: 30px;
-  margin: 4px 1px;
-  padding: 0 6px;
+  min-height: 24px;
+  margin: 4px 0;
+  padding: 0 8px;
   color: @foreground;
-  background-color: #06040b;
-  border-bottom: 1px solid #342346;
+  background-color: #100a19;
+  border-left: 1px solid #342346;
+  box-shadow: inset 0 -1px 0 alpha(#a746e8, 0.24);
 }
 
-#tray { padding: 0 5px; }
+#tray { padding: 0 7px; }
 #mpris { color: #e7def0; }
 #network { color: #bd9eea; }
 #pulseaudio { color: #a746e8; }
@@ -106,18 +115,23 @@ window#waybar {
 #battery { color: #a99acb; }
 
 #custom-clock {
-  min-width: 174px;
+  min-width: 180px;
+  min-height: 24px;
+  margin: 4px 0;
   padding: 0 14px;
   color: #f1e8f7;
-  background-color: #06040b;
-  border-left: 1px solid #a746e8;
-  border-right: 1px solid #a746e8;
-  letter-spacing: 0.7px;
+  background-image: linear-gradient(90deg, #100a19, #211032 50%, #100a19);
+  border: 1px solid alpha(#a746e8, 0.65);
+  box-shadow: 0 0 13px alpha(#a746e8, 0.18),
+              inset 0 1px 0 alpha(#ffffff, 0.10);
+  letter-spacing: 1px;
 }
 
 #memory.warning,
 #cpu.warning,
-#battery.warning { color: #d9c979; }
+#battery.warning {
+  color: #d9c979;
+}
 
 #memory.critical,
 #cpu.critical,
@@ -127,14 +141,17 @@ window#waybar {
 }
 
 tooltip {
-  padding: 7px 9px;
+  padding: 6px 8px;
   color: @foreground;
   background-color: #06040b;
   border: 1px solid #a746e8;
-  box-shadow: 0 5px 16px alpha(#000000, 0.45);
+  box-shadow: 0 4px 14px alpha(#000000, 0.45);
 }
 
-tooltip label { color: @foreground; font-weight: 500; }
+tooltip label {
+  color: @foreground;
+  font-weight: 500;
+}
 
 @keyframes nous-alert {
   50% { opacity: 0.36; }
