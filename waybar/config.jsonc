@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "exclusive": true,
-  "height": 32,
+  "height": 44,
   "spacing": 0,
   "reload_style_on_change": true,
   "modules-left": ["custom/brand", "hyprland/workspaces", "tray", "mpris"],
@@ -10,7 +10,7 @@
   "modules-right": ["network", "pulseaudio", "memory", "cpu", "battery"],
 
   "custom/brand": {
-    "format": "  ◇ NOUS / RESEARCH  ",
+    "format": "  ▲ OMARCHY  ",
     "tooltip": false
   },
   "custom/clock": {

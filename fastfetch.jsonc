@@ -7,24 +7,24 @@
   },
   "display": {
     "separator": "  ",
-    "color": "#cdd6f4",
+    "color": "#ded7e8",
     "brightColor": false
   },
   "modules": [
     { "type": "custom", "format": "\u001b[38;2;203;166;247m  ╭─ NOUS RESEARCH / FIELD NOTE ───────────────╮" },
-    { "type": "os", "key": "  │ os", "keyColor": "#cba6f7" },
-    { "type": "host", "key": "  │ host", "keyColor": "#cba6f7" },
-    { "type": "kernel", "key": "  │ kernel", "keyColor": "#cba6f7" },
-    { "type": "uptime", "key": "  │ uptime", "keyColor": "#cba6f7" },
-    { "type": "cpu", "key": "  │ cpu", "keyColor": "#89b4fa", "showPeCoreCount": true },
-    { "type": "gpu", "key": "  │ gpu", "keyColor": "#89b4fa", "detectionMethod": "pci" },
-    { "type": "memory", "key": "  │ memory", "keyColor": "#89b4fa" },
-    { "type": "disk", "key": "  ╰─ disk", "keyColor": "#89b4fa", "folders": "/" },
+    { "type": "os", "key": "  │ os", "keyColor": "#a746e8" },
+    { "type": "host", "key": "  │ host", "keyColor": "#a746e8" },
+    { "type": "kernel", "key": "  │ kernel", "keyColor": "#a746e8" },
+    { "type": "uptime", "key": "  │ uptime", "keyColor": "#a746e8" },
+    { "type": "cpu", "key": "  │ cpu", "keyColor": "#9563da", "showPeCoreCount": true },
+    { "type": "gpu", "key": "  │ gpu", "keyColor": "#9563da", "detectionMethod": "pci" },
+    { "type": "memory", "key": "  │ memory", "keyColor": "#9563da" },
+    { "type": "disk", "key": "  ╰─ disk", "keyColor": "#9563da", "folders": "/" },
     { "type": "custom", "format": "\u001b[38;2;69;71;90m  ├─────────────────────────────────────────────┤" },
-    { "type": "wm", "key": "  │ wm", "keyColor": "#cba6f7" },
-    { "type": "de", "key": "  │ de", "keyColor": "#cba6f7" },
-    { "type": "terminal", "key": "  │ terminal", "keyColor": "#cba6f7" },
-    { "type": "packages", "key": "  ╰─ packages", "keyColor": "#cba6f7" },
+    { "type": "wm", "key": "  │ wm", "keyColor": "#a746e8" },
+    { "type": "de", "key": "  │ de", "keyColor": "#a746e8" },
+    { "type": "terminal", "key": "  │ terminal", "keyColor": "#a746e8" },
+    { "type": "packages", "key": "  ╰─ packages", "keyColor": "#a746e8" },
     { "type": "custom", "format": "\u001b[38;2;148;226;213m  ◇ research · build · understand · nous\u001b[0m" }
   ]
 }
