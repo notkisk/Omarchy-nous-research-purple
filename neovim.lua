@@ -7,7 +7,7 @@ return {
       opts = {
         transparent = false,
         colors = {
-        bg         = "#1e1e2e",
+        bg         = "#0f0f17",
         dark_bg    = "#171723",
         darker_bg  = "#0f0f17",
         lighter_bg = "#353543",
@@ -37,7 +37,7 @@ return {
         accent               = "#89b4fa",
         cursor               = "#cdd6f4",
         foreground           = "#cdd6f4",
-        background           = "#1e1e2e",
+        background           = "#0f0f17",
         selection             = "#353543",
         selection_foreground = "#cdd6f4",
         selection_background = "#353543",

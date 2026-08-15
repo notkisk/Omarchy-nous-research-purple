@@ -13,7 +13,7 @@
 }
 
 window#waybar {
-  background-color: #1e1e2e;
+  background-color: #0f0f17;
   color: @foreground;
 }
 
@@ -21,7 +21,7 @@ window#waybar {
   min-height: 26px;
   margin: 1px 6px 0;
   padding: 0 4px;
-  background-color: #1e1e2e;
+  background-color: #0f0f17;
   border-top: 1px solid #cba6f7;
   border-bottom: 1px solid #45475a;
   box-shadow: 0 3px 12px alpha(#000000, 0.38);
@@ -34,7 +34,7 @@ window#waybar {
   min-height: 20px;
   padding: 0 7px;
   color: @foreground;
-  background-color: #171723;
+  background-color: #0f0f17;
   border-left: 2px solid #cba6f7;
   border-right: 1px solid #89b4fa;
   letter-spacing: 0.5px;
@@ -54,7 +54,7 @@ window#waybar {
 #workspaces {
   margin: 0 8px 0 10px;
   padding: 0 2px;
-  background-color: #171723;
+  background-color: #0f0f17;
   border-bottom: 1px solid #45475a;
 }
 
@@ -94,7 +94,7 @@ window#waybar {
   margin: 3px 1px;
   padding: 0 6px;
   color: @foreground;
-  background-color: #171723;
+  background-color: #0f0f17;
   border-bottom: 1px solid #45475a;
 }
 
@@ -110,7 +110,7 @@ window#waybar {
   min-width: 174px;
   padding: 0 14px;
   color: #dae0f7;
-  background-color: #353543;
+  background-color: #0f0f17;
   border-left: 1px solid #cba6f7;
   border-right: 1px solid #cba6f7;
   letter-spacing: 0.7px;
@@ -130,7 +130,7 @@ window#waybar {
 tooltip {
   padding: 7px 9px;
   color: @foreground;
-  background-color: #1e1e2e;
+  background-color: #0f0f17;
   border: 1px solid #cba6f7;
   box-shadow: 0 5px 16px alpha(#000000, 0.45);
 }

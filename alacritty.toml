@@ -1,6 +1,6 @@
 [colors]
 [colors.primary]
-background = "#1e1e2e"
+background = "#0f0f17"
 foreground = "#cdd6f4"
 
 [colors.normal]
@@ -24,8 +24,11 @@ cyan    = "#94e2d5"
 white   = "#ffffff"
 
 [colors.cursor]
-text   = "#1e1e2e"
+text   = "#0f0f17"
 cursor = "#cdd6f4"
+
+[window]
+opacity = 1.0
 
 # Thin animated beam caret; Alacritty keeps this deliberately clean.
 [cursor]
