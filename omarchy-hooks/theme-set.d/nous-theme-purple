@@ -1,17 +1,30 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-[[ ${1:-} == "nous-theme-purple" ]] || exit 0
+case "${1:-}" in
+  nous-theme-purple|nous-research-purple|omarchy-nous-research-purple) ;;
+  *) exit 0 ;;
+esac
 
 config_root="${XDG_CONFIG_HOME:-$HOME/.config}"
-theme_dir="$config_root/omarchy/current/theme"
+theme_dir="$HOME/.local/state/omarchy/current/theme"
 
 mkdir -p "$config_root/fastfetch" "$config_root/waybar" "$config_root/kitty" \
+  "$config_root/gtk-3.0" "$config_root/gtk-4.0" "$config_root/btop/themes" \
   "$config_root/omarchy/branding" "$config_root/nvim/plugin/after" "$config_root/nvim/lua/plugins"
 cp "$theme_dir/fastfetch.jsonc" "$config_root/fastfetch/config.jsonc"
 cp "$theme_dir/fastfetch-logo.txt" "$config_root/omarchy/branding/nous-research.txt"
 cp "$theme_dir/waybar/config.jsonc" "$config_root/waybar/config.jsonc"
 cp "$theme_dir/waybar/style.css" "$config_root/waybar/style.css"
+cp "$theme_dir/gtk.css" "$config_root/gtk-3.0/gtk.css"
+cp "$theme_dir/gtk.css" "$config_root/gtk-4.0/gtk.css"
+
+# btop already reads the theme through a symlink in the themes dir; only copy
+# when that link is absent so we never copy a file onto itself.
+btop_theme="$config_root/btop/themes/current.theme"
+if [[ "$(readlink -f "$btop_theme" 2>/dev/null || true)" != "$(readlink -f "$theme_dir/btop.theme")" ]]; then
+  cp "$theme_dir/btop.theme" "$btop_theme"
+fi
 
 # Omarchy normally makes this Neovim plugin a symlink to the current theme;
 # avoid copying a file onto itself when that standard link is present.
@@ -29,8 +42,13 @@ if command -v gsettings >/dev/null 2>&1; then
 fi
 command -v omarchy-theme-set-browser >/dev/null 2>&1 && omarchy-theme-set-browser || true
 
-# The existing Omarchy Kitty config includes this path after the theme file.
+# Ensure Kitty loads the caret override after the base config.
 cp "$theme_dir/kitty-override.conf" "$config_root/kitty/nous-research-override.conf"
+kitty_config="$config_root/kitty/kitty.conf"
+kitty_include="include $config_root/kitty/nous-research-override.conf"
+if [[ -f "$kitty_config" ]] && ! grep -Fqx "$kitty_include" "$kitty_config"; then
+  printf '\n%s\n' "$kitty_include" >> "$kitty_config"
+fi
 
 icon_root="${XDG_DATA_HOME:-$HOME/.local/share}/icons/Nous-Research"
 mkdir -p "$icon_root"
@@ -44,4 +62,5 @@ if command -v gsettings >/dev/null 2>&1; then
 fi
 
 command -v omarchy-restart-waybar >/dev/null 2>&1 && omarchy-restart-waybar || true
+command -v omarchy-restart-btop >/dev/null 2>&1 && omarchy-restart-btop || true
 command -v omarchy-restart-terminal >/dev/null 2>&1 && omarchy-restart-terminal || true
