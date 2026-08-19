@@ -18,7 +18,7 @@ Then select the installed **Nous Research** theme if Omarchy does not activate i
 
 The included `install.sh` also installs the scoped global theme hook required for Fastfetch, Waybar's full layout, GTK, Starship, btop refresh, and Kitty's final caret override. This matters because Omarchy does not execute hooks stored inside a theme directory.
 
-### Optional Waybar layout
+### Optional Waybar layout(Compatible only with Omarchy versions prior to Omarchy quatro)
 
 To overwrite the active Waybar configuration with this theme's layout:
 
@@ -72,20 +72,14 @@ omarchy theme bg next
 </table>
 
 
-## Design notes
+## Light themed version of this
+[Light themed version](https://github.com/notkisk/omarchy-nous-theme)
 
-This theme moves away from the previous blue research-station aesthetic and instead draws from **Greek classical art, scientific engraving, and futuristic research culture**.
+<img width="2560" height="1440" alt="image" src="https://github.com/user-attachments/assets/c77f993a-07c4-491c-a0d2-e94075825d2c" />
 
-The palette centers around:
 
-* **Deep near-black purple** — the primary background.
-* **Electric violet** — focus states, borders, highlights, and active elements.
-* **Soft lavender** — readable foreground text and secondary UI.
-* **Magenta-purple** — selected and emphasized elements.
-* **Muted purple-gray** — inactive and informational elements.
+Install directly with Omarchy:
 
-The wallpaper direction combines **Greek statues, ancient ruins, celestial geometry, engraved linework, orbital diagrams, and modern research symbolism**. Heavy texture, halftone shading, and etched details give the artwork a physical print/engraving character while the purple palette ties it directly into the desktop UI.
-
-The overall goal is a theme that feels less like a conventional Linux “hacker” theme and more like a **research laboratory from an alternate classical future**.
-
-The Fastfetch portrait remains plain Unicode/ASCII text colored by Fastfetch. It only appears when Fastfetch is run; it is not embedded into Kitty or the wallpaper.
+```
+omarchy-theme-install https://github.com/notkisk/omarchy-nous-theme
+```
